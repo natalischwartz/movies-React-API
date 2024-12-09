@@ -1,0 +1,11 @@
+.movieCard{
+    list-style-type: none;
+    text-align: center;
+}
+
+.movieImage{
+    border-radius: 10px;
+    background-color: azure;
+    max-width: 100%;
+    height: auto;
+}
