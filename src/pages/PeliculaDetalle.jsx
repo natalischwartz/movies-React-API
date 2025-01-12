@@ -26,11 +26,9 @@ export const PeliculaDetalle = () => {
         return <Spinner/>
     }
 
-
-
-    if (!pelicula) {
-        return null
-    }
+    // if (!pelicula) {
+    //     return null
+    // }
     const imgUrl = `https://image.tmdb.org/t/p/w200${pelicula.poster_path}`
     return (
         <div className="contenedorDetalle">

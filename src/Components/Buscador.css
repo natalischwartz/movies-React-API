@@ -1,0 +1,28 @@
+.containerBuscador{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.cajaBuscador{
+    position: relative;
+}
+
+
+
+.botonBuscador{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding-right: 5px;
+}
+
+.inputBuscador{
+    height: 35px;
+    border-radius: 10px;
+    padding: 5px 30px 5px 10px;
+}
