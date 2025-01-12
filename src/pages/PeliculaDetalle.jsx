@@ -3,16 +3,30 @@ import { useParams } from "react-router-dom"
 import { get } from "../utils/httpCliente"
 import './PeliculaDetalle.css'
 
+import { Spinner } from "../Components/Spinner"
+
 export const PeliculaDetalle = () => {
     const { peliculaId } = useParams()
-    const [pelicula, setPelicula] = useState(null)
+
+    const [cargando, setCargando] = useState(true);
+    const [pelicula, setPelicula] = useState(null);
 
     useEffect(() => {
+        setCargando(true)
         get(`/movie/${peliculaId}`).then((data) => {
-            console.log(data)
+            // console.log(data)
             setPelicula(data)
+            setCargando(false)
         })
+        
     }, [peliculaId])
+
+
+    if(cargando){
+        return <Spinner/>
+    }
+
+
 
     if (!pelicula) {
         return null
