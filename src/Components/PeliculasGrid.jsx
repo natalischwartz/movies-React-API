@@ -4,31 +4,22 @@ import { useState , useEffect } from "react"
 import { PeliculasCard } from "./PeliculasCard"
 import "./PeliculasGrid.css"
 import { Spinner } from "./Spinner.jsx"
-import { useLocation } from "react-router-dom"; //10. importamos useLocation 
+import { useQuery } from "../hooks/useQuery.jsx"
 
 
 
 export const PeliculasGrid = () =>{
 
- //13. utilizamos este hook para tomar lo que viene por parametro.
- const useQuery = () =>{
-    return new URLSearchParams(useLocation().search)
-  }
-
-  //12. utilizo useQuery() para obtener lo que buscamos
-  const query = useQuery()
-  const search = query.get("search")
-  // console.log(search)
-
-  //11. vemos en el navegador lo que vaiaja en la URL( query params), separamos lo que buscamos (location.search)
-  // const location = useLocation()
-  // console.log(location);
-  // console.log(location.search)
-
-
 
 const [peliculas, setPeliculas] = useState([]);
 const [cargando, setCargando] = useState(true);
+
+
+
+  //13. utilizo useQuery() para obtener lo que buscamos
+  const query = useQuery()
+  const search = query.get("search")
+  // console.log(search)
 
 useEffect(() =>{
     
