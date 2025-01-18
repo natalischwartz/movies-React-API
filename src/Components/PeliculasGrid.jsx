@@ -26,7 +26,7 @@ useEffect(() =>{
     setCargando(true)
     //15. hago un if ternario, si hay busqueda asigna ese valor a una url sino muestra todas las peliculas
 
-    const searchURL  = search?"/search/movie?query=" + search:"/discover/movie"
+    const searchURL  = search?"/search/multi?query=" + search:"/discover/movie"
 
 
     get(searchURL).then((data)=>{

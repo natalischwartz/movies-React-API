@@ -1,6 +1,14 @@
 .movieCard{
     list-style-type: none;
     text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.movieCard a{
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .movieImage{
@@ -8,4 +16,9 @@
     background-color: azure;
     max-width: 100%;
     height: auto;
+    transition:1s;
+}
+
+.movieImage:hover{
+    transform: scale(1);
 }
